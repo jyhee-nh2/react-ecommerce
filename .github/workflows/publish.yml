@@ -27,10 +27,15 @@ jobs:
       - name: Install gh-pages
         run: npm install --save gh-pages --legacy-peer-deps
 
-      - name: Setup Pages ⚙️
-        uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
+      # - name: Setup Pages ⚙️
+      #   uses: actions/configure-pages@v4
+      #   with:
+      #     static_site_generator: next
+      
+      - name: Configure Git
+        run: |
+          git config --global user.email "jyhee@nh2system.com"
+          git config --global user.name "jyhee-nh2"
 
       - name: Build 🏗️
         env:
