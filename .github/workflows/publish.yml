@@ -46,7 +46,10 @@ jobs:
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build/static
+          path: ./build
+
+      - name: list workspace folder
+        run: ls -a ${{ github.workspace }}
 
   deploy:
     environment:
