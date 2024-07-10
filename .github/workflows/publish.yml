@@ -38,11 +38,9 @@ jobs:
           git config --global user.name "jyhee-nh2"
 
       - name: Build 🏗️
-        env:
-          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
         run: |
           npx eslint src --fix
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git remote set-url origin https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}
           CI=false npm run deploy
           
       # - name: Upload artifact 📡
