@@ -33,6 +33,8 @@ jobs:
           static_site_generator: next
 
       - name: Build 🏗️
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
         run: |
           git config --global user.email "jyhee@nh2system.com"
           git config --global user.name "jy"
