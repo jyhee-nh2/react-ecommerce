@@ -8,7 +8,7 @@ const BestSellers = () => {
   return (
     <div className='bestSellerMainParent flex flex-row'>
       {store.map((item) => {
-        if (item.type == "bestSeller")
+        if (item.type === "bestSeller")
           return (
             <Link to={`/${item.id}`} key={item.id}>  
             <div key={item.id} className="bestSellerIndivitualItem">

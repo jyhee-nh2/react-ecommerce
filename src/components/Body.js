@@ -124,7 +124,7 @@ const Body = () => {
 
                 <div className='bodyTypeHold flex'>
                     {store.map((item) => {
-                        if (item.type == "navbar-BodyType") {
+                        if (item.type === "navbar-BodyType") {
                             return (
                                 <Link to={`/${item.id}`} key={item.id}>
 
@@ -178,7 +178,7 @@ const Body = () => {
                 <div className='flex flex-row'>
                     <div className='TravelStoreHold flex flex-row gap-16'>
                         {store.map((item) => {
-                            if (item.type == "navbar-TravelType") {
+                            if (item.type === "navbar-TravelType") {
                                 return (
                                     <Link to={`/${item.id}`} key={item.id}>
 
@@ -215,7 +215,7 @@ const Body = () => {
 
                 <div className='newTypeHold relative flex felx-row gap-10'>
                     {store.map((item) => {
-                        if (item.type == "navbar-NewType") {
+                        if (item.type === "navbar-NewType") {
                             return (
                                 <Link to={`/${item.id}`} key={item.id}>
 

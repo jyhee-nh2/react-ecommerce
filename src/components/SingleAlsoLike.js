@@ -42,7 +42,7 @@ export default class AutoPlayMethods extends Component {
             <div className="singleMainParentSlider">
                 <Slider ref={slider => (this.slider = slider)} {...settings}>
                     {store.map((item) => {
-                        if (item.type == "ourBestSellers") {
+                        if (item.type === "ourBestSellers") {
                             return (
                                 <Link to={`/${item.id}`} key={item.id}>
                                     <div key={item.id}>

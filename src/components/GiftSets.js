@@ -32,7 +32,7 @@ const GiftSets = () => {
             <div className='flex fle-row gap-20 giftHold'>
 
                 {store.map((item) => {
-                    if (item.type == "gift")
+                    if (item.type === "gift")
                         return (
                             <Link to={`/${item.id}`} key={item.id}>
 

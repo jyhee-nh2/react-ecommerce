@@ -45,7 +45,7 @@ export default class AutoPlayMethods extends Component {
             <div className="youMay">
                 <Marquee pauseOnHover={true} speed={100} >
                     {store.map((item) => {
-                        if (item.type == "ourBestSellers") {
+                        if (item.type === "ourBestSellers") {
                             return (<div key={item.id}>
                                 <Link to={`/${item.id}`}>
                                     <img src={item.primaryImage} className=" w-48 spCaroImg brForMobile rounded-xl pl-4 pr-4  mb-8" />
