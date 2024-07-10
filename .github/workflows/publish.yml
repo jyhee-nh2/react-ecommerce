@@ -32,9 +32,11 @@ jobs:
         with:
           static_site_generator: next
 
-      - name: Build and Deploy 🏗️
-        run: npm run build
-
+      - name: Build 🏗️
+        run: |
+          npx eslint src --fix
+          npm run build
+          
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
