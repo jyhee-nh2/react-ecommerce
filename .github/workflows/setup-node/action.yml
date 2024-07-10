@@ -22,3 +22,8 @@ runs:
         npm install -g npm-check-updates
         ncu -u
         npm install --legacy-peer-deps
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "jyhee@nh2system.com"
+        git config --global user.name "jyhee-nh2"
