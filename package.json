@@ -2,7 +2,7 @@
   "name": "e-com",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jyhee-nh2.github.io/react-ecommerece",
+  "homepage": "https://jyhee-nh2.github.io/react-ecommerce",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.12",
     "@chakra-ui/react": "^2.4.1",
