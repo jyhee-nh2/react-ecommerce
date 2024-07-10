@@ -36,8 +36,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
         run: |
-          git config --global user.email "jyhee@nh2system.com"
-          git config --global user.name "jy"
           npx eslint src --fix
           CI=false npm run deploy
           
