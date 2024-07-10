@@ -24,8 +24,8 @@ jobs:
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: ./.github/workflows/setup-node
 
-      - name: Install gh-pages
-        run: npm install --save gh-pages --legacy-peer-deps
+      - name: Install React Snapshot
+        run: npm i -D react-snapshot --legacy-peer-deps
 
       # - name: Setup Pages ⚙️
       #   uses: actions/configure-pages@v4
@@ -41,7 +41,8 @@ jobs:
         run: |
           npx eslint src --fix
           git remote set-url origin https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}
-          CI=false npm run deploy
+          npm run build
+          # CI=false npm run deploy
           
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
